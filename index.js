@@ -1,5 +1,6 @@
+// ここから書いてください。
 function createMotivationalSpeechWallpaper(object){
-    //card
+    //カード
     let cardDiv = document.createElement("div");
     cardDiv.classList.add("card", "container", "my-5", "border", "border-white");
     let rowDiv = document.createElement("div");
@@ -8,19 +9,19 @@ function createMotivationalSpeechWallpaper(object){
     colDiv.classList.add("col-12", "col-md-8", "col-lg-8");
 
 
-    //image
+    //画像の部分
     let backgroundImg = document.createElement("img");
     backgroundImg.classList.add("card-img");
     backgroundImg.src = object.imgUrl;
     
 
-    //outer div
+    //文の外枠div
     let sentenceOuter = document.createElement("div");
     sentenceOuter.classList.add("card-img-overlay", "d-flex");
-    //use colorcode
+    //カラーコードで色を変換したいときのやり方。
     sentenceOuter.style.color = object.color;
 
-    //sentence place
+    //位置によって別々のクラスを追加する。
     if(object.vertical === "top"){
         sentenceOuter.classList.add("align-items-start");
     }else if(object.vertical === "center"){
@@ -37,7 +38,7 @@ function createMotivationalSpeechWallpaper(object){
     }
 
 
-    //sentence
+    //文
     let sentenceH4 = document.createElement("h4");
     sentenceH4.classList.add("font-weight-bold", "col-8", "col-md-7");
 
@@ -83,7 +84,7 @@ let paper3 = new Paper("Scientists study the world as it is, engineers create th
 
 target.append(createMotivationalSpeechWallpaper(paper3));
 
-
+// 関数呼び出しの例
 // let domObj = document.getElementById("target");
 
 // motivationalSpeechWallpaper("Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away. - Antoine de Saint", "1B4F72", "https://cdn.pixabay.com/photo/2020/06/12/03/06/magnifying-glass-5288877__340.jpg", "top", "right");
